@@ -1,0 +1,74 @@
+html {
+    font-size: 20px;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Sriracha', cursive;
+}
+
+#homeworks {
+    height: 100vh;
+    background-color: #fee125;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homework-links {
+    width: 60%;
+    height: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.homework-links a {
+    line-height: 1.5;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.homework-links a::before {
+    content: '';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: 400ms;
+    transform: scaleX(0);
+}
+
+.homework-links a:hover::before {
+    transform: scaleX(1);
+}
+
+.title {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 4rem;
+    color: #fff;
+}
+
+.preloader {
+    z-index: 1000;
+    padding: 300px;
+    height: 101vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+}
