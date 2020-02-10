@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express.js": "^1.0.0",
+    "morgan": "^1.9.1",
+    "nodemailer": "^6.3.0",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yurkinIvan/yurkinIvan.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yurkinIvan/yurkinIvan.github.io/issues"
+  },
+  "homepage": "https://github.com/yurkinIvan/yurkinIvan.github.io#readme"
+}
