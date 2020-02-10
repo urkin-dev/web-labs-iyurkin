@@ -21,4 +21,4 @@ app.use(`/`, indexRouter);
 
 let server = http.createServer(app);
 
-server.listen(5050, () => { console.log(`Server is running`) });
+server.listen(5500, () => { console.log(`Server is running`) });
