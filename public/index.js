@@ -1,45 +1,36 @@
-let 
-    mainAnimation = document.querySelector(".main_animation")
-    isScrolling   = false;
+let
+    firstScreen  = document.querySelector(`.first-slide`),
+    secondScreen = document.querySelector(`.second-slide`),
+    screenWidth  = document.body.clientWidth,
+    tsStatus     = true, // true when screens aren't moving
+    rsStatus     = false; // window resize status
 
-document.addEventListener("scroll", throttleScroll)
-
-/**
- * Function for 60 frames in second
- * @param {Object} e event object
- */
-function throttleScroll(e) {
-    if (isScrolling == false) {
-        window.requestAnimationFrame(() => {
-            scrolling(e);
-            isScrolling = false;
-        });
-    }
-    isScrolling = true;
+window.onload = function() {
+    document.body.classList.remove(`preload`);
 }
 
-/**
- * This function calling every time when the page get scroll
- * @param {Object} e Event object
- */
-function scrolling(e) {
+if (screenWidth > 768) {
 
-    if (isPartiallyVisible(mainAnimation)) {
-        mainAnimation.classList.add("animated")
+    secondScreen.style.transform = `translateX(${screenWidth}px) scale(.8)`;
+
+    window.onresize = function(e) {
+        window.location = window.location.href;
     }
 
-}
+    document.addEventListener("wheel", e => {
 
-/**
- * Check the element and return true if it is fully visible
- * @param {Object} el DOM element
- */
-function isPartiallyVisible(el) {
-    let elBound = el.getBoundingClientRect();
+        let delta = e.deltaY;
 
-    let top    = elBound.top;
-    let bottom = elBound.bottom;
-    let height = elBound.height;
-
-    return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+        if (delta > 0 && tsStatus == true) {
+            secondScreen.style.transform = `translateX(0) scale(1)`;
+            firstScreen.style.transform = `translateX(-${screenWidth}px) scale(.8)`;
+            tsStatus = false;
+            secondScreen.ontransitionend = (e) => { tsStatus = true }
+        } else if (delta < 0 && tsStatus == true) {
+            secondScreen.style.transform = `translateX(${screenWidth}px) scale(.8)`;
+            firstScreen.style.transform = `translateX(0) scale(1)`;
+            tsStatus = false;
+            secondScreen.ontransitionend = (e) => { tsStatus = true }
+        }
+    });
 }

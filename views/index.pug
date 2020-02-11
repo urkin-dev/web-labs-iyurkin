@@ -6,19 +6,21 @@ html(lang='ru')
 		<link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet"> 
 		title Web labs
 		link(rel='stylesheet', href='./style.css')
-	body
-		header
-			h2.title Labs
-		.main_animation
-			main.homeworks
-				.homework-links
-						a(href=``) Link to labs 1
-						a(href=``) Link to labs 2
-						a(href=``) Link to labs 3
-						a(href=``) Link to labs 4
-						a(href=``) Link to labs 5
-						a(href=``) Link to labs 6
-						a(href=``) Link to labs 7
-						a(href=``) Link to labs 8
-						a(href=``) Link to labs 9
+	body.preload
+		main
+			section.first-slide
+				h1.title Labs
+				.links
+					a(href="").git-link Ссылка на репозиторий
+			section.second-slide
+				.second-slide__content
+					a(href="") Link to lab 1
+					a(href="") Link to lab 2
+					a(href="") Link to lab 3
+					a(href="") Link to lab 4
+					a(href="") Link to lab 5
+					a(href="") Link to lab 6
+					a(href="") Link to lab 7
+					a(href="") Link to lab 8
+					a(href="") Link to lab 9
 		script(src='./index.js')

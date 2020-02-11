@@ -1,5 +1,8 @@
 html {
     font-size: 20px;
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 *, *:before, *:after {
@@ -10,80 +13,127 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Sriracha', cursive;
+    background-color: rgb(76, 175, 114);
 }
 
-.homeworks {
-    height: 100%;
+.preload * {
+    transition: none !important;
+}
+
+section {
+    height: 100vh;
     width: 100%;
-    background-color: #fee125;
+    position: absolute;
+}
+
+main {
+    perspective: 1000px;
+}
+
+.first-slide {
+    background-color: #000;
+    top: 0;
+    transition: transform 1s;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.second-slide {
+    background-color: #fee125;
+    top: 0;
+    transition: transform 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+/******************** SLIDES' CONTENT ********************/
+
+.second-slide__content {
+    width: 50%;
+    height: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
 }
 
-.homework-links {
-    width: 60%;
-    height: 40%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-}
-
-.homework-links a {
+.second-slide__content a {
+    color: #000;
+    font-size: 1.5rem;
     line-height: 1.5;
     text-decoration: none;
-    color: #000;
     position: relative;
-    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
 }
 
-.homework-links a::before {
-    content: '';
+.second-slide__content a::before, .git-link::before {
+    content: "";
+    display: block;
     bottom: 0;
-    left: 0;
+    left: 10%;
     position: absolute;
-    width: 100%;
+    width: 80%;
     height: 2px;
     background-color: #000;
     transition: 400ms;
     transform: scaleX(0);
 }
 
-.homework-links a:hover::before {
+.git-link::before {
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+}
+
+.second-slide__content a:hover::before, .git-link:hover::before {
     transform: scaleX(1);
 }
 
 .title {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-header {
-    padding: 300px;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000;
+.git-link {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: .8rem;
 }
 
-.main_animation {
-    opacity: 0;
-}
-
-.main_animation.animated {
-    z-index: 1000;
-    top: 0;
+.links {
     position: absolute;
-    height: 100vh;
-    width: 100%;
-    transition-property: opacity;
-    transition-duration: 1s;
-    opacity: 1;
-    transition-timing-function: ease-out;
+    bottom: 10px;
+    left: 10px;
+}
+
+@media screen and (max-width: 1150px) {
+    .second-slide__content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .second-slide__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    html {
+        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x: scroll;
+    }
+
+    section {
+        position: relative;
+    }
 }
