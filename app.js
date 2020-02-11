@@ -6,6 +6,11 @@ let
 
 let app = express();
 
+app.use(function(req, res, next) {
+    res.setHeader("Content-Security-Policy", "script-src 'self' https://apis.google.com");
+    next();
+});
+
 let indexRouter = require(`./routes/index`);
 
 app.set('views', path.join(__dirname, 'views'));
