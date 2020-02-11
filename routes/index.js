@@ -2,8 +2,6 @@ let express = require(`express`);
 let router = express.Router();
 
 router.get(`/`, (req, res) => res.render(`index`));
-router.get(`/lab1`, (req, res) => res.render(`./labs/lab1`));
-router.get(`/lab2`, (req, res) => res.render(`./labs/lab2`));
 router.get(`/lab3`, (req, res) => res.render(`./labs/lab3`));
 router.get(`/lab4`, (req, res) => res.render(`./labs/lab4`));
 router.get(`/lab5`, (req, res) => res.render(`./labs/lab5`));
