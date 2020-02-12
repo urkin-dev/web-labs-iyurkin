@@ -21,16 +21,16 @@ if (screenWidth > 768) {
 
         let delta = e.deltaY;
 
-        if (delta > 0 && tsStatus == true) {
+        if (delta > 0 && tsStatus) {
             secondScreen.style.transform = `translateX(0) scale(1)`;
             firstScreen.style.transform = `translateX(-${screenWidth}px) scale(.8)`;
-            tsStatus = false;
-            secondScreen.ontransitionend = (e) => { tsStatus = true }
-        } else if (delta < 0 && tsStatus == true) {
+            secondScreen.ontransitionstart = () => { tsStatus = false }
+            secondScreen.ontransitionend = () => { tsStatus = true }
+        } else if (delta < 0 && tsStatus) {
             secondScreen.style.transform = `translateX(${screenWidth}px) scale(.8)`;
             firstScreen.style.transform = `translateX(0) scale(1)`;
-            tsStatus = false;
-            secondScreen.ontransitionend = (e) => { tsStatus = true }
+            secondScreen.ontransitionstart = () => { tsStatus = false }
+            secondScreen.ontransitionend = () => { tsStatus = true }
         }
     });
 }
