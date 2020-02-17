@@ -2,8 +2,46 @@
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel='stylesheet', href="./lab's styles/lab3.css")
+        link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic")
+        link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css")
+        link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css")
         title Lab 3
     body
-        | Here will be lab 3
+        header
+            .container
+                .menu
+                    input#menu__toggle(type="checkbox")
+                    label.menu__hamburger(for="menu__toggle")
+                        span
+                    ul.menu__nav
+                        li
+                            a(href="#") О проекте
+                        li
+                            a(href="#") Курсы
+                        li
+                            a(href="#") Отзывы
+                        li
+                            a(href="#") Контакты
+                    button.button.menu_start-btn Начать обучение    
+                .banner.row
+                    .banner__intro.column
+                        h1.banner__intro-title Веб-разработка с нуля
+                        p.banner__intro-desc
+                            | Получи востребованную работу будущего с гарантией высокого заработка и измени свой привычный формат жизни.
+                    .banner__3dcanvas.column
+        .container
+            section.about.row
+                .about__content.column
+                    h2 Почему наши курсы лучшие в интернете
+                    p.about__content-text
+                        | Made neat an on be gave show snug tore. Up hung mr we give rest half. As mr started arrival subject by believe. An concluded sportsman offending so provision mr education. Painful so he an comfort is manners.
+                    ul.pluses
+                        li Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        li Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                .about__image.column
+                    img(src="", alt="about us")
