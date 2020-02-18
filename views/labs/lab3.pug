@@ -112,9 +112,9 @@ html(lang="en")
                         | за месяц обучения
                 .prices__form-container.column
                     h3 Запишитесь на консультацию
-                    .prices__form(action="/", method="post")
+                    form.prices__form(action="/", method="post")
                         input#username(type="text", name="username", placeholder="Имя")
-                        input#phone(type="text", name="phone", placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18")
+                        input#phone(type="text", name="phone", placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="10" maxlength="20")
                         input#email(type="text", name="email", placeholder="Email")
                         button(type="submit") Записаться
         footer

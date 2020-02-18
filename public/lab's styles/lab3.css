@@ -508,4 +508,11 @@ footer {
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
     }
+
+    .prices__form #username,
+    .prices__form #phone,
+    .prices__form #email,
+    .prices__form button {
+        width: 100%;
+}
 }
