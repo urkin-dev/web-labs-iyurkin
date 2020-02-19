@@ -46,7 +46,7 @@ let
 
     // Load module
     let loader = new THREE.GLTFLoader();
-    loader.load("lab's scripts/lab3/3d/scene.gltf", function(gltf) {
+    loader.load("labs_scripts/lab3/3d/scene.gltf", function(gltf) {
         scene.add(gltf.scene);
 
         balloon = gltf.scene.children[0];
