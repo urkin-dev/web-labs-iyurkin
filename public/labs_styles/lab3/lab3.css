@@ -467,6 +467,15 @@ footer .yb {
     background-image: url('../../img/yb.png');
 }
 
+.validation {
+    display: flex;
+}
+
+.validation p {
+    margin: 0;
+    padding: 0;
+}
+
 /********************** 3D STUFF **********************/
 
 .scene,
