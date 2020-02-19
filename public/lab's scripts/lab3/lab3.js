@@ -2,8 +2,11 @@ let screenWidth = document.body.clientWidth,
     index       = 1,
     isMoving    = false;
 
-// Variables for setup
 
+if (screenWidth < 1230) {
+    document.removeEventListener("mousemove", move)
+}
+// Variables for setup
 let 
     container,
     camera,
@@ -52,6 +55,8 @@ let
     });
 })();
 
+document.addEventListener("mousemove", move);
+
 function animate() {
 
     requestAnimationFrame(animate);
@@ -65,16 +70,7 @@ function animate() {
     renderer.render(scene, camera);
 }
 
-document.onmousemove = (e) => {
+function move(e) {
     isMoving = true;
     index = e.pageX;
 }
-
-/* function onWindowResize() {
-    let canvas = container.children[0];
-
-    canvas.style.width = '100%';
-
-}
-
-window.addEventListener("resize", onWindowResize); */
