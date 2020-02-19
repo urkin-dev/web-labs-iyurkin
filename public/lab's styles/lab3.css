@@ -17,7 +17,7 @@ body {
 header {
     background: linear-gradient(292.96deg, #2F8F8F -38.63%, rgba(255, 255, 255, 0) 159.7%), #00E000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    height: 90vh;
+    height: 100vh;
 }
 
 .menu {
@@ -103,24 +103,7 @@ header {
     width: 100%;
 }
 
-.banner {
-    margin-top: 90px;
-}
-
-.banner__intro {
-    margin-top: 90px;
-}
-
-.banner__3dcanvas {
-    height: 500px;
-    width: 500px;
-}
-
-.banner__3dcanvas {
-    background-color: rgba(51, 51, 51, 0);
-}
-
-.banner__intro-title {
+.banner__title {
     font-style: normal;
     font-weight: normal;
     font-size: 46px;
@@ -133,9 +116,10 @@ header {
     text-align: center;
     position: relative;
     margin-bottom: 10px;
+    margin-top: 180px;
 }
 
-.banner__intro-title::after {
+.banner__title::after {
     content: '';
     display: block;
     position: absolute;
@@ -148,7 +132,7 @@ header {
     height: 74px;
 }
 
-.banner__intro-desc {
+.banner__desc {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -156,11 +140,16 @@ header {
     color: #fff;
 }
 
-.banner__intro-desc {
+.banner__desc {
     margin-left: 20px;
+    width: 550px;
 }
 
 /********************** ABOUT **********************/
+
+.about {
+    margin-top: 93px;
+}
 
 .about__content h2, .curses h2, .sevices h2 {
     font-style: normal;
@@ -168,7 +157,6 @@ header {
     font-size: 23px;
     color: #000;
     margin: 0;
-    margin-top: 50px;
 }
 
 .about__content h3 {
@@ -214,9 +202,14 @@ header {
 
 /********************** CURSES SECTION **********************/
 
+.curses {
+    margin-bottom: 83px;
+}
+
 .curses h2 {
     text-align: center;
     margin-bottom: 43px;
+    margin-top: 83px;
 }
 
 .curses .cards {
@@ -267,6 +260,10 @@ header {
 
 /********************** SERVICES SECTION **********************/
 
+.services h2 {
+    margin-top: 83px;
+}
+
 .services__card {
     text-align: center;
     margin-top: 53px;
@@ -278,6 +275,23 @@ header {
     background-color: rgb(145, 145, 145);
     border-radius: 50%;
     margin: 0 auto;
+}
+
+.services__card-img.teacher {
+    background-image: url('../img/teacher.jpg');
+    background-size: cover;
+    background-position-x: -15px;
+}
+
+.services__card-img.practice {
+    background-image: url('../img/practice.jpg');
+    background-size: cover;
+}
+
+.services__card-img.team {
+    background-image: url('../img/team1.jpg');
+    background-size: cover;
+    background-position-x: -40px;
 }
 
 .services__card-content h3 {
@@ -432,7 +446,36 @@ footer {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: rgb(102, 102, 102);
+    background-size: cover;
+}
+
+footer .vk {
+    background-image: url('../img/vk.png');
+}
+
+footer .tg {
+    background-image: url('../img/tg.png');
+}
+
+footer .tw {
+    background-image: url('../img/tw.png');
+}
+
+footer .yb {
+    background-image: url('../img/yb.png');
+}
+
+/********************** 3D STUFF **********************/
+
+.scene,
+canvas {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
 @media screen and (max-width: 949px) {
@@ -448,14 +491,26 @@ footer {
     .statistics {
         display: none;
     }
+
+    .prices__form #username,
+    .prices__form #phone,
+    .prices__form #email {
+        width: 100%;
+    }
+
+    .prices__form button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .scene {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .banner__intro {
-        margin-top: 20px;
-    }
-
-    .banner__intro-title {
+    .banner__title {
         font-size: 30px;
         color: #fff;
         width: 407px;
@@ -464,11 +519,15 @@ footer {
         margin-bottom: 15px;
     }
 
-    .banner__intro-title::after {
+    .banner__title::after {
         top: 13px;
         left: 13px;
         width: 397px;
         height: 44px;
+    }
+
+    .banner__desc {
+        width: 400px;
     }
 }
 
@@ -507,6 +566,7 @@ footer {
         height: 60%;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
+        border-bottom-left-radius: 0;
     }
 
     .prices__form #username,

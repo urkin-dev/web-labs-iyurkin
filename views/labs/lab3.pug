@@ -25,17 +25,15 @@ html(lang="en")
                             a(href="#") Отзывы
                         li
                             a(href="#") Контакты
-                    button.button.menu_start-btn Начать обучение    
-                .banner.row
-                    .banner__intro.column
-                        h1.banner__intro-title Веб-разработка с нуля
-                        p.banner__intro-desc
-                            | Получи востребованную работу будущего с гарантией высокого заработка и измени свой привычный формат жизни.
-                    .banner__3dcanvas.column
+                    button.button.menu_start-btn Начать обучение
+                h1.banner__title Веб-разработка с нуля
+                p.banner__desc
+                    | Получи востребованную работу будущего с гарантией высокого заработка и измени свой привычный формат жизни.
+            .scene
         .container
             section.about.row
                 .about__image.column
-                    img(src="./img/about.png", alt="about us")
+                    img(src="./img/about.jpg", alt="about us")
                 .about__content.column
                     h2 Почему наши курсы лучшие в интернете
                     p.about__content-text
@@ -62,40 +60,40 @@ html(lang="en")
                 h2 Изучайте основы вашей профессии
                 .cards
                     .curses__card
-                        img.curses__card-img(src="", alt="Card 1")
+                        img.curses__card-img(src="./img/designer.png", alt="Card 1")
                         .curses__card-content
-                            h3.curses__card-title Веб дизайн
-                            p.curses__card-desc Онлайн курсы по веб дизайну с ДЗ и личным преподователем
+                            h3.curses__card-title Веб дизайн/верстка
+                            p.curses__card-desc Онлайн курсы по веб дизайну и верстке с ДЗ и личным преподователем
                     .curses__card
-                        img.curses__card-img(src="", alt="Card 2")
+                        img.curses__card-img(src="./img/mobile.jpg", alt="Card 2")
                         .curses__card-content
-                            h3.curses__card-title Веб верстальщик
-                            p.curses__card-desc Онлайн курсы по верстке HTML/CSS с ДЗ и личным преподователем
+                            h3.curses__card-title Мобильная разработка
+                            p.curses__card-desc Онлайн курсы по мобильной разработке с ДЗ и личным преподователем
                     .curses__card
-                        img.curses__card-img(src="", alt="Card 3")
+                        img.curses__card-img(src="./img/frontend.png", alt="Card 3")
                         .curses__card-content
                             h3.curses__card-title Front-end разработчик
                             p.curses__card-desc Онлайн курсы по front-end разработке с ДЗ и личным преподователем
                     .curses__card
-                        img.curses__card-img(src="", alt="Card 4")
+                        img.curses__card-img(src="./img/backend.png", alt="Card 4")
                         .curses__card-content
                             h3.curses__card-title Back-end разработчик
                             p.curses__card-desc Онлайн курсы по back-end разработке с ДЗ и личным преподователем
             section.sevices
-                h2 Что вас ждёт на обучение
+                h2 Что вас ждёт на обучении
                 .services-container.row
                     .services__card.column
-                        .services__card-img
+                        .services__card-img.teacher
                         .services__card-content
                             h3 Общение с преподователем
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, molestias eaque iusto aliquam eligendi sequi culpa nostrum doloremque corrupti. Quasi ducimus quam perspiciatis quidem tempore. Id autem nulla cupiditate nihil optio necessitatibus accusantium minima ipsum nesciunt mollitia, officiis aperiam inventore.
                     .services__card.column
-                        .services__card-img
+                        .services__card-img.practice
                         .services__card-content
                             h3 Практика
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, molestias eaque iusto aliquam eligendi sequi culpa nostrum doloremque corrupti. Quasi ducimus quam perspiciatis quidem tempore. Id autem nulla cupiditate nihil optio necessitatibus accusantium minima ipsum nesciunt mollitia, officiis aperiam inventore.
                     .services__card.column
-                        .services__card-img
+                        .services__card-img.team
                         .services__card-content
                             h3 Работа в команде
                             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, molestias eaque iusto aliquam eligendi sequi culpa nostrum doloremque corrupti. Quasi ducimus quam perspiciatis quidem tempore. Id autem nulla cupiditate nihil optio necessitatibus accusantium minima ipsum nesciunt mollitia, officiis aperiam inventore.
@@ -124,4 +122,8 @@ html(lang="en")
                     a.tg(href="#")
                     a.tw(href="#")
                     a.yb(href="#")
+                p © И.М. Юркин, 2020
                 p.phone-number +7 999 999 99-99
+        script(type="text/javascript" src="./lab's scripts/lab3/three.min.js")
+        script(type="text/javascript" src="./lab's scripts/lab3/GLTFLoader.js")
+        script(type="text/javascript" src="./lab's scripts/lab3/lab3.js")
