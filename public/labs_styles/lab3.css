@@ -280,18 +280,18 @@ header {
 }
 
 .services__card-img.teacher {
-    background-image: url('../../img/teacher.jpg');
+    background-image: url('../img/teacher.jpg');
     background-size: cover;
     background-position-x: -15px;
 }
 
 .services__card-img.practice {
-    background-image: url('../../img/practice.jpg');
+    background-image: url('../img/practice.jpg');
     background-size: cover;
 }
 
 .services__card-img.team {
-    background-image: url('../../img/team1.jpg');
+    background-image: url('../img/team1.jpg');
     background-size: cover;
     background-position-x: -40px;
 }
@@ -451,19 +451,19 @@ footer {
     background-size: cover;
 }
 footer .vk {
-    background-image: url('../../img/vk.png');
+    background-image: url('../img/vk.png');
 }
 
 footer .tg {
-    background-image: url('../../img/tg.png');
+    background-image: url('../img/tg.png');
 }
 
 footer .tw {
-    background-image: url('../../img/tw.png');
+    background-image: url('../img/tw.png');
 }
 
 footer .yb {
-    background-image: url('../../img/yb.png');
+    background-image: url('../img/yb.png');
 }
 
 .validation {

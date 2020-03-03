@@ -17,6 +17,8 @@ html {
     font-weight: 500;
     font-size: 3rem;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 /***************************** HEADER *****************************/
@@ -29,7 +31,7 @@ header {
 }
 
 .wrapper {
-    width: 60%;
+    width: 65%;
     margin: 0 auto;
 }
 
@@ -47,6 +49,53 @@ header {
     display: flex;
     width: 630px;
     justify-content: space-between;
+}
+
+#main-nav__toggle {
+    display: none;
+}
+
+.main-nav__hamburger {
+    display: none;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    position: relative;
+}
+
+.main-nav__hamburger > span,
+.main-nav__hamburger > span::before,
+.main-nav__hamburger > span::after {
+    display: block;
+    position: absolute;  
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+.main-nav__hamburger > span::before {
+    content: '';
+    top: -8px;
+}
+
+.main-nav__hamburger > span::after {
+    content: '';
+    top: 8px;
+}
+
+#main-nav__toggle:checked ~ .main-nav__hamburger > span {
+    transform: rotate(45deg);
+}
+
+#main-nav__toggle:checked ~ .main-nav__hamburger > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#main-nav__toggle:checked ~ .main-nav__hamburger > span::after {
+    top: 0;
+    transform: rotate(90deg);
 }
 
 .main-nav__menu li {
@@ -81,7 +130,7 @@ header {
     content: "";
     width: 15px;
     height: 18px;
-    background-image: url("../../img/lab4/phone.png");
+    background-image: url("../img/lab4/phone.png");
     left: -20px;
     top: -1px;
     background-repeat: no-repeat;
@@ -100,7 +149,7 @@ header {
     content: "";
     width: 15px;
     height: 18px;
-    background-image: url("../../img/lab4/location.png");
+    background-image: url("../img/lab4/location.png");
     left: -20px;
     top: -4px;
     background-repeat: no-repeat;
@@ -111,6 +160,7 @@ header {
     margin-top: 140px;
     height: 331px;
     position: relative;
+    z-index: 5;
 }
 
 .slides {
@@ -125,6 +175,20 @@ header {
     width: 100%;
     height: 100%;
     animation: slide-animation 1s;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slides .slide-1 {
+    background-image: url('../img/lab4/slide_1.png');
+}
+
+.slides .slide-2 {
+    background-image: url('../img/lab4/slide_2.jpg');
+}
+
+.slides .slide-3 {
+    background-image: url('../img/lab4/slide_3.jpg');
 }
 
 .slider-info__btn {
@@ -206,21 +270,19 @@ header {
 }
 
 .cards {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 45px;
-    grid-column-gap: 30px;
-    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .card {
-    width: 370px;
     height: 460px;
+    width: 370px;
     background-color: #fff;
     box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.102355);
     text-decoration: none;
     transition: transform .6s;
+    margin-top: 40px;
     position: relative;
 }
 
@@ -230,7 +292,7 @@ header {
     left: 0;
     top: 0;
     background-color: #FFE500;
-    background-image: url('../../img/lab4/showMap.png');
+    background-image: url('../img/lab4/showMap.png');
     background-repeat: no-repeat;
     background-position: 10px 50%;
     transition: clip-path .6s;
@@ -257,7 +319,7 @@ header {
 }
 
 .card__img {
-    width: 370px;
+    width: 100%;
     height: 345px;
 }
 
@@ -318,5 +380,84 @@ header {
 
     html {
         font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    html {
+        font-size: 7px;
+    }
+
+    .slider-info__title {
+        width: 285px;
+        height: 158px;
+    }
+
+    .slider-info__btn {
+        width: 168px;
+    }
+
+    .slider-dots {
+        margin-top: 140px;
+    }
+
+    .card {
+        width: 288px;
+        height: 358px;
+    }
+
+    .card__img {
+        height: 268px;
+    }
+
+    .main-nav__phone,
+    .main-nav__location,
+    .main-nav__menu {
+        display: none;
+    }
+
+    .main-nav {
+        flex-direction: row-reverse;
+    }
+
+    .main-nav__hamburger {
+        display: block;
+        margin-top: 15px;
+        z-index: 11;
+    }
+
+    #main-nav__toggle:checked ~ .main-nav__menu {
+        position: absolute;
+        z-index: 9;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #161616;
+        height: 100%;
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding-top: 176px;
+    }
+
+    .main-nav__logo {
+        z-index: 10;
+    }
+
+    .main-nav li {
+        margin-top: 59px;
+    }
+
+    .main-nav__link {
+        font-size: 2.4rem;
+        line-height: 16px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 300;
     }
 }
