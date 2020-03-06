@@ -62,7 +62,7 @@ function animate() {
     requestAnimationFrame(animate);
 
     if (isMoving) {
-        balloon.rotation.z =  index/400
+        balloon.rotation.z =  index/400;
     } else {
         balloon.rotation.z += 0.005;
     }

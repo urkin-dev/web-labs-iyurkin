@@ -21,7 +21,6 @@ function next() {
 }
 
 function showSlides(n) {
-    // let dots = document.getElementsByClassName('slider-dots-item');
 
     if (n > slides.length) {
         slideIndex = 1;
@@ -35,10 +34,5 @@ function showSlides(n) {
         slides[i].style.display = 'none';
     }
 
-    // for (let i = 0; i < dots.length; i++) {
-    //     dots[i].className = dots[i].className.replace(' active-dots', '');
-    // }
-
     slides[slideIndex - 1].style.display = 'block';
-    // dots[slideIndex - 1].classList.add('active-dots');
 }

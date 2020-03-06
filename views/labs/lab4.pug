@@ -41,7 +41,7 @@ html(lang="en")
                     div(class="slide slide-1")
                     div(class="slide slide-2")
                     div(class="slide slide-3")
-        section.services
+        section.features
             .wrapper
                 h2.section-title Чем мы можем быть полезны
                 .cards
@@ -84,4 +84,82 @@ html(lang="en")
                         .card__img
                             img(src="./img/lab4/card9.png", alt="Card image")
                         p.card__title Железнодорожный весы на 2 вагона
+        section.advantages
+            .wrapper
+                h2.section-title Наши преимущества
+                .advantages__wrapper
+                    .advantages__item
+                        .advantages__item-number 01
+                        p.advantages__item-text 11.5 га площадь базы
+                    .advantages__item
+                        .advantages__item-number 02
+                        p.advantages__item-text 2 своих тепловоза
+                    .advantages__item
+                        .advantages__item-number 03
+                        p.advantages__item-text Повышенный путь для выгрузки инертных грузов
+                    .advantages__item
+                        .advantages__item-number 04
+                        p.advantages__item-text 8 км от центра Казани
+                    .advantages__item
+                        .advantages__item-number 05
+                        p.advantages__item-text Возможность выгрузки хопров и сыпучих грузов
+                    .advantages__item
+                        .advantages__item-number 06
+                        p.advantages__item-text Железнодорожные весы на 2 вагона
+                    .advantages__item
+                        .advantages__item-number 07
+                        p.advantages__item-text Автомобильные весы 18 м на 80 тонн
+                    .advantages__item
+                        .advantages__item-number 08
+                        p.advantages__item-text 3 пандуса для выгрузки и загрузки крытых вагонов и фур
+                    .advantages__item
+                        .advantages__item-number 09
+                        p.advantages__item-text  Козловой кран
+        section.map
+            .wrapper
+                h2.section-title Карта территорий
+                img.map__img(src="./img/lab4/map.png", alt="Карта территорий")
+        section.first-service
+            .wrapper
+                .first-service__wrapper
+                    .first-service__content
+                        h2.first-service__title Аренда земли
+                        p.first-service__text
+                            | Предлагаем в аренду открытые площадки для хранения грузов и техники. Площадь базы составляет 11,5га. Общая  протяженность внутренних ж/д путей позволяет производить погрузо-разгрузочные работы до 60 вагонов в сутки единовременно. На базе работают два маневровых собственных тепловоза. Есть железнодорожные и автомобильные весы, козловой кран, повышенный путь, пандусы для выгрузки крытых вагонов и фур.
+                        button.first-service__order-btn Получить консультацию
+                    .first-service__img
+                        img(src="./img/lab4/first-service.jpg", alt="")
+        section.second-service
+            .wrapper
+                .second-service__wrapper
+                    .second-service__content
+                        h2.second-service__title Аренда земли
+                        p.second-service__text
+                            | Предлагаем в аренду открытые площадки для хранения грузов и техники. Площадь базы составляет 11,5га. Общая  протяженность внутренних ж/д путей позволяет производить погрузо-разгрузочные работы до 60 вагонов в сутки единовременно. На базе работают два маневровых собственных тепловоза. Есть железнодорожные и автомобильные весы, козловой кран, повышенный путь, пандусы для выгрузки крытых вагонов и фур.
+                        button.second-service__order-btn Получить консультацию
+                    .second-service__img
+                        img(src="./img/lab4/second-service.jpg", alt="")
+        section.contact
+            h2.section-title Узнать о ценах, получить консультацию или персональное предложение
+            form.contact-form(action="#", method="post")
+                input#name(type="text", name="name" placeholder="Имя")
+                input#phone(type="text", name="phone" placeholder="Телефон")
+                button(type="submit") Отправить
+        footer
+            .wrapper
+                .main-nav
+                    img.main-nav__logo(src="./img/lab4/logo.png", alt="Logo")
+                    ul.main-nav__menu
+                        li
+                            a.main-nav__link(href="#") Земля
+                        li
+                            a.main-nav__link(href="#") Крановые площади
+                        li
+                            a.main-nav__link(href="#") Выгрузка вагонов
+                        li
+                            a.main-nav__link(href="#") Фасовка
+                        li
+                            a.main-nav__link(href="#") Щебень
+                    p.main-nav__phone +7 (927) 678-45-14
+                    p.main-nav__location г. КАЗАНЬ, СКЛАДСКАЯ 20
     script(src="./labs_scripts/lab4/lab4.js")
