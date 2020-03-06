@@ -773,7 +773,7 @@ footer .main-nav {
 
     .slider-info__title {
         width: 285px;
-        height: 158px;
+        height: auto;
     }
 
     .slider-info__btn {
