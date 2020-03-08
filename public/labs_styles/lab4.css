@@ -728,6 +728,10 @@ footer .main-nav {
         grid-template-columns: 1fr;
     }
 
+    footer .main-nav__menu {
+        width: 100%;
+    }
+
     .second-service__text {
         width: 90%;
         height: auto;
@@ -781,7 +785,7 @@ footer .main-nav {
     }
 
     .slider-dots {
-        margin-top: 140px;
+        margin-top: 70px;
     }
 
     .card {
@@ -856,5 +860,9 @@ footer .main-nav {
 
     .contact-form button {
         width: 90%;
+    }
+
+    .card .maps::after {
+        font-size: 1.2rem;
     }
 }
