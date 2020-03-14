@@ -583,6 +583,8 @@ footer .main-nav {
     flex-wrap: wrap;
 }
 
+/***************************** ANIMATIONS *****************************/
+
 @keyframes slide-animation {
     from {
         opacity: .6;
@@ -592,6 +594,8 @@ footer .main-nav {
         opacity: 1;
     }
 }
+
+/***************************** MEDIA *****************************/
 
 @media screen and (max-width: 1544px) {
     .second-service__img {
@@ -864,5 +868,10 @@ footer .main-nav {
 
     .card .maps::after {
         font-size: 1.2rem;
+    }
+
+    .card__title {
+        margin-top: 10px;
+        margin-left: 10px;
     }
 }
