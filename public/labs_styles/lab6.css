@@ -1,0 +1,298 @@
+html {
+    overflow: hidden;
+}
+
+*::selection {
+    background-color: transparent;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+main {
+    position: relative;
+}
+
+.hyperspace {
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    z-index: 998;
+}
+
+.container {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.preload * {
+    transition: none !important;
+}
+
+.orbit-stuff, .space-stuff {
+    animation-name: appearance;
+    animation-duration: 1.3s;
+}
+
+.go-btn {
+    width: 200px;
+    height: 30px;
+    color: #f7f700;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    border: 1px solid #f7f700;
+    transform: translateX(-100px);
+    z-index: 99999;
+}
+
+.go-btn:hover {
+    cursor: pointer;
+}
+
+.missed {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: 0;
+    margin: 0;
+    color: rgb(180, 66, 66);
+}
+
+.points {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 0;
+    margin: 0;
+    color: rgb(98, 180, 66);
+}
+
+/****************************** PRELOADER ******************************/
+
+.preloader {
+    z-index: 999999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 1);
+    transition: 1s all;
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader .bb-body {
+    width: 140px;
+    height: 140px;
+    animation: 2s spin infinite linear;
+    background-image: url("../img/lab6/bb8-body.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.loader .bb-head {
+    width: 90px;
+    height: 90px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../img/lab6/bb8-head.png");
+    transform: translate(-30px, 10px) rotate(-25deg);
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    transition: opacity 2s linear;
+}
+  
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    transition: visibility 0s 2s, opacity 2s linear;
+}
+
+.preloader .error {
+    display: none;
+    color: rgb(185, 48, 48);
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-right: 40px;
+}
+
+/****************************** SPACE ******************************/
+
+.space-stuff {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    cursor: url("../img/lab6/aim.png") 25 25, pointer;
+}
+
+.death-star {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    width: 200px;
+    animation: levitate 1s linear infinite;
+    animation-direction: alternate-reverse;
+}
+
+.tie-fighter {
+    width: 25px;
+    position: absolute;
+    animation-name: fly;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+}
+
+/****************************** ORBIT ******************************/   
+
+.orbit-stuff {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+.x-wing {
+    position: absolute;
+    width: 60px;
+    top: -57px;
+    right: -45px;
+    animation: x-wing-fly 5s ease-in-out;   
+}
+
+.x-wing2 {
+    position: absolute;
+    top: 30%;
+    right: 90%;
+    width: 50px;
+    animation: fly-in-front 1.3s linear;
+}
+
+.planet {
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    width: 650px;
+    animation: levitate 1s infinite alternate-reverse;
+}
+
+.ship {
+    position: absolute;
+    right: 41%;
+    top: 25%;
+    width: 300px;
+    animation: levitate 1s infinite alternate-reverse;
+    box-shadow: 230px 60px 80px -60px rgb(0, 0, 0);
+}
+
+.venator {
+    width: 300px;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    animation: levitate 1s infinite alternate-reverse;
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(0, 0) scale(1) rotateZ(0deg);
+    }
+
+    25% {
+        transform: translate(10px, 10px) scale(2) rotateZ(30deg);
+    }
+
+    50% {
+        transform: translate(-10px, 10px) scale(4) rotateZ(0deg);
+    }
+
+    75% {
+        transform: translate(10px, -10px) scale(6) rotateZ(-360deg);
+    }
+
+    100% {
+        transform: translate(10px, 10px) scale(8) rotateZ(-360deg);
+    }
+}
+
+@keyframes x-wing-fly {
+    0%, 25% {
+        transform: translate(0%, 0%);
+    }
+
+    75%, 100% {
+        transform: translate(-1500px , 900px) scale(5);
+    }
+}
+
+@keyframes fly-in-front {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        transform: translateY(900px) scale(20);
+    }
+}
+
+@keyframes appearance {
+    from {
+        opacity: .3;
+        transform: scale(.2);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes levitate {
+    0% {
+        transform: translateY(-2px);
+    }
+
+    100% {
+        transform: translateY(2px);
+    }
+}

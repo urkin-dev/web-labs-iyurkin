@@ -1,9 +1,30 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Lab 6
-    body
-        | Here will be lab 6
+doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		title Lab 6
+		link(rel='stylesheet', href="./labs_styles/lab6.css")
+	body.preload
+		.preloader
+			p.error You're screen width is not supported
+			.loader
+				.bb-head
+				.bb-body
+		main
+			video.hyperspace(autoplaay="stop")
+				source(src="./img/lab6/Hyperspace.mp4" type="video/mp4")
+			.container
+				button.go-btn Go hyperspace, Chewie!
+				p.missed
+				p.points
+				.space-stuff
+					img.death-star(src="./img/lab6/death-star.png", alt="")
+					.mobs
+				.orbit-stuff
+					img.planet(src="./img/lab6/anoat.webp", alt="")
+					img.ship(src="./img/lab6/ship1.png", alt="")
+					img.venator(src="./img/lab6/venator.webp", alt="")
+					img.x-wing(src="./img/lab6/x-wing.webp", alt="")
+					img.x-wing2(src="./img/lab6/x-wing2.webp", alt="")
+		script(src='./labs_scripts/lab6/lab6.js')
