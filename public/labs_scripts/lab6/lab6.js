@@ -18,6 +18,8 @@ var
 
 function loadData() {
 
+    document.querySelector('main').style.display = 'none';
+
     xWing.addEventListener('animationend', (e) => { xWing.style.display = 'none' })
 
     xWing2.addEventListener('animationend', (e) => { xWing2.style.display = 'none' })
@@ -51,6 +53,7 @@ function loadData() {
 
 loadData()
     .then(() => {
+        document.querySelector('main').style.display = 'block';
         preloader.classList.add('hidden');
         preloader.classList.remove('visible');
     })
