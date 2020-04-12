@@ -7,7 +7,7 @@ router.get(`/lab4`, (req, res) => res.render(`./labs/lab4`));
 router.get(`/lab5`, (req, res) => res.render(`./labs/lab5`));
 router.get(`/lab6`, (req, res) => res.render(`./labs/lab6`));
 router.get(`/lab7`, (req, res) => res.render(`./labs/lab7`));
-router.get(`/lab8`, (req, res) => res.render(`./labs/lab8`));
+router.get(`/lab8`, require("./lab8View.js").get);
 router.get(`/lab9`, (req, res) => res.render(`./labs/lab9`));
 
 module.exports = router;

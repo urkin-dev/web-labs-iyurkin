@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Lab8
-    body
-        | Here will be lab 8
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		link(rel='stylesheet', href="./labs_styles/lab8.css")
+		title Lab8
+	body
+		.flex-container
+			.item 1
+			.item 2
+			.item 3
+		.control
+			p.control-title Вводите свойства и их значения
+			.parrent-wrapp
+				.parrent-prop
+					each prop in parentStyles
+						input(type="text" value= "" + prop)
+				button.add-parent(type='button') Add
+			.child-wrapp
+				.child-prop
+					each prop in childStyles
+						input(type="text" value= "" + prop)
+				button.add-child(type='button') Add
+			.control-btn
+				button.save-btn(type='submit') Save
+				button.clear-btn(type='submit') Clear
+
+		script(src='./labs_scripts/lab8/lab8.js')
