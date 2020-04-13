@@ -7,6 +7,7 @@ html(lang="en")
 		link(rel='stylesheet', href="./labs_styles/lab8.css")
 		title Lab8
 	body
+		h1.title FlexBox
 		.flex-container
 			.item 1
 			.item 2
@@ -14,11 +15,13 @@ html(lang="en")
 		.control
 			p.control-title Вводите свойства и их значения
 			.parrent-wrapp
+				p.parrent-wrapp__title Родительский контейнер
 				.parrent-prop
 					each prop in parentStyles
 						input(type="text" value= "" + prop)
 				button.add-parent(type='button') Add
 			.child-wrapp
+				p.child-wrapp__title Дочерние блоки
 				.child-prop
 					each prop in childStyles
 						input(type="text" value= "" + prop)

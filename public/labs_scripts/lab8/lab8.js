@@ -1,4 +1,4 @@
-let 
+let
     addParentBtn    = document.querySelector('.add-parent'),
     addChildBtn     = document.querySelector('.add-child'),
     saveBtn         = document.querySelector('.save-btn'),
@@ -51,11 +51,11 @@ function saveStyles() {
     parentStyles.width = '70%';
     parentStyles.margin = '30px auto';
     parentStyles.display = 'flex';
-    parentStyles.border = '1px solid red';
     parentStyles.padding = '20px';
     parentStyles['border-radius'] = '5px';
     parentStyles['background-color'] = '#9C27B0';
     parentStyles.height = '450px';
+    parentStyles['box-shadow'] = '0 0 40px -10px rgb(37, 37, 37)';
 
     // Added requeired styles for child container
     childStyles.backgroundColor = '#FFEB3B';
